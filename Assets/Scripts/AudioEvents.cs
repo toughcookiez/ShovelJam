@@ -1,7 +1,13 @@
+using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioEvents : MonoBehaviour
 {
+
+    public AudioEvent OnBeat;
+
+
     [Tooltip("The AudioSource component to analyze.")]
     public AudioSource _audioSource;
 
@@ -10,7 +16,7 @@ public class AudioEvents : MonoBehaviour
     public float _beatThreshold = 1.2f;
 
     [Tooltip("Minimum time in seconds between detected beats. Prevents multiple beat detections from a single transient.")]
-    [Range(0.05f, 1.0f)] // Recommended range for tuning
+    [Range(0.05f, 30.0f)] // Recommended range for tuning
     public float _beatCooldownTime = 0.2f;
 
     // Internal array to hold the raw spectrum data from AudioSource.GetSpectrumData
@@ -86,10 +92,10 @@ public class AudioEvents : MonoBehaviour
     {
        if (IsBeatFrame)
         {
-            int lane = GetDominantMusicalNoteLane(4);
-            if (lane > 0)
+            int note = GetAudioNoteIndex();
+            if (note > -1)
             {
-                Debug.Log("Beat:" + _lastBeatTime + " " + lane + " " + GetDominantMusicalNote());
+                OnBeat.Invoke(note);
             }
         }
     }
@@ -142,27 +148,7 @@ public class AudioEvents : MonoBehaviour
                 }
             }
 
-            return true;
-        }
-    }
-
-    /// <summary>
-    /// Optional: Visualizes the spectrum data in the Scene view for debugging.
-    /// </summary>
-    void OnDrawGizmos()
-    {
-        if (_spectrum == null || _spectrum.Length == 0) return;
-
-        Gizmos.color = Color.red;
-        float scaleFactor = 100f; // Adjust this to change the height of the lines
-        float spacing = 0.01f;   // Adjust this to change the spacing between lines
-
-        // Draw lines representing the spectrum data
-        for (int i = 0; i < _spectrum.Length; i++)
-        {
-            Vector3 start = transform.position + new Vector3(i * spacing - (_spectrum.Length * spacing / 2f), 0, 0);
-            Vector3 end = start + new Vector3(0, _spectrum[i] * scaleFactor, 0);
-            Gizmos.DrawLine(start, end);
+            return _isBeatThisFrame;
         }
     }
 
@@ -170,11 +156,11 @@ public class AudioEvents : MonoBehaviour
     /// Finds the dominant frequency in the spectrum and converts it to a musical note name.
     /// </summary>
     /// <returns>A string representing the dominant musical note (e.g., "C4", "A#5").</returns>
-    private string GetDominantMusicalNote()
+    private int GetAudioNoteIndex()
     {
         if (_spectrum == null || _spectrum.Length == 0)
         {
-            return "N/A";
+            return -1;
         }
 
         float maxAmplitude = 0f;
@@ -193,7 +179,7 @@ public class AudioEvents : MonoBehaviour
         // If no significant amplitude is found, return N/A
         if (maxAmplitude < 0.001f) // A small threshold to avoid noise
         {
-            return "N/A";
+            return -1;
         }
 
         // Calculate the frequency corresponding to the maxIndex
@@ -215,52 +201,7 @@ public class AudioEvents : MonoBehaviour
         int noteIndex = midiNote % 12; // 0=C, 1=C#, ..., 11=B
         int octave = (midiNote / 12) - 1; // MIDI note 0 is C-1, so C4 is MIDI 60
 
-        return NOTE_NAMES[noteIndex] + octave.ToString();
+        return noteIndex;
     }
 
-
-
-    private int GetDominantMusicalNoteLane(int numberOfLanes)
-    {
-        if (_spectrum == null || _spectrum.Length == 0)
-        {
-            return -1;
-        }
-
-        float maxAmplitude = 0f;
-        int maxIndex = 0;
-
-        // Find the frequency bin with the highest amplitude
-        for (int i = 0; i < _spectrum.Length; i++)
-        {
-            if (_spectrum[i] > maxAmplitude)
-            {
-                maxAmplitude = _spectrum[i];
-                maxIndex = i;
-            }
-        }
-
-        // If no significant amplitude is found, return N/A
-        if (maxAmplitude < 0.001f) // A small threshold to avoid noise
-        {
-            return -1;
-        }
-
-        // Calculate the frequency corresponding to the maxIndex
-        // Frequency per bin = (AudioSettings.outputSampleRate / 2) / _spectrum.Length
-        // The Nyquist frequency (half the sample rate) is the max frequency represented.
-        float frequency = maxIndex * (AudioSettings.outputSampleRate / 2.0f) / _spectrum.Length;
-
-        // Convert frequency to MIDI note number
-        // MIDI note number = 69 + 12 * log2(frequency / 440 Hz)
-        float midiNoteFloat = A4_MIDI_NOTE + 12 * Mathf.Log(frequency / A4_FREQUENCY, 2);
-
-        // Round to the nearest integer to get the MIDI note number
-        int midiNote = Mathf.RoundToInt(midiNoteFloat);
-
-        // Ensure MIDI note is within a reasonable range (0-127)
-        midiNote = Mathf.Clamp(midiNote, 0, 127);
-
-        return midiNote % numberOfLanes;
-    }
 }
