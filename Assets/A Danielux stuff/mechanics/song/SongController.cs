@@ -28,7 +28,6 @@ public class SongController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(AS.time);
         SongTimer.value += Time.timeScale * Time.deltaTime;
 
         if(SongTimer.value >= Song.length)
