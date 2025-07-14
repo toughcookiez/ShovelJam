@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b449db76cfe0ee247bd0ae34a89a08bd, type: 3}
+  m_Name: Mago-Level3
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: b6a6b12cdce591a4ea481b7006008879, type: 3}
+  transcriptionEntries:
+  - timestamp: 3.3919954
+    lane: 2
+  - timestamp: 4.010658
+    lane: 2
+  - timestamp: 4.586644
+    lane: 2
+  - timestamp: 5.226644
+    lane: 1
+  - timestamp: 5.653311
+    lane: 0
+  - timestamp: 5.887982
+    lane: 0
+  - timestamp: 6.2719955
+    lane: 2
+  - timestamp: 6.6559863
+    lane: 0
+  - timestamp: 7.2533107
+    lane: 2
+  - timestamp: 9.194649
+    lane: 1
+  - timestamp: 9.621315
+    lane: 3
+  - timestamp: 9.855987
+    lane: 1
+  - timestamp: 11.562653
+    lane: 3
+  - timestamp: 12.031996
+    lane: 2
+  - timestamp: 12.373311
+    lane: 0
+  - timestamp: 12.778662
+    lane: 0
+  - timestamp: 14.591995
+    lane: 2
+  - timestamp: 15.231996
+    lane: 2
+  - timestamp: 15.786644
+    lane: 2
+  - timestamp: 16.831995
+    lane: 2
+  - timestamp: 17.407982
+    lane: 3
+  - timestamp: 18.751995
+    lane: 3
+  - timestamp: 19.370657
+    lane: 2
+  - timestamp: 21.781315
+    lane: 2
+  - timestamp: 22.122654
+    lane: 0
+  - timestamp: 22.591995
+    lane: 2
+  - timestamp: 24.405329
+    lane: 0
+  - timestamp: 24.767982
+    lane: 3
+  - timestamp: 25.02399
+    lane: 2
+  - timestamp: 25.34399
+    lane: 3
+  - timestamp: 25.599977
+    lane: 3
+  - timestamp: 25.81331
+    lane: 3
