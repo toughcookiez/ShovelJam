@@ -63,6 +63,10 @@ public class ShopHandler : MonoBehaviour
         {
             return;
         }
+        if (_bandStats.Cards.Count() == 3)
+        {
+            return;
+        }
         _bandStats.Money -= card.Price;
         _bandStats.AddCard(card.Card);
         card.GetComponent<Animator>().SetTrigger("Flip");
