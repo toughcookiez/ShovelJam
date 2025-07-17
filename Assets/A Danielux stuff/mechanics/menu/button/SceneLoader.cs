@@ -15,7 +15,7 @@ public class SceneLoader : MonoBehaviour
     public List<Level> Levels;
 
     [SerializeField] public List<int> _startPayments;
-    [SerializeField] private BandStats _bandStats;
+    [SerializeField] public BandStats _bandStats;
     public GameObject fade;
     [Tooltip("the scene you want the player to go")]
     public int SceneTP;

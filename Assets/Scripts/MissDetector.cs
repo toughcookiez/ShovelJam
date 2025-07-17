@@ -75,6 +75,7 @@ public class MissDetector : MonoBehaviour
             
             Destroy(collision.gameObject);
             _bandStats.ReviseMistakeLimit(_mistakes);
+            _mistakes++;
             if (_mistakes >= _mistakeLimit)
             {
                 StartCoroutine(LoseLevel());
@@ -116,6 +117,11 @@ public class MissDetector : MonoBehaviour
 
             StartCoroutine(WinLevel());
         }
+    }
+
+    public void TakeDamage()
+    {
+        StartCoroutine(ChangeKeyColor());
     }
 
     private IEnumerator ChangeKeyColor()

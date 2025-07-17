@@ -273,6 +273,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!50 &39355447
 Rigidbody2D:
   serializedVersion: 5
@@ -474,6 +475,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!61 &184384068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -958,6 +960,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!50 &482285583
 Rigidbody2D:
   serializedVersion: 5
@@ -2615,6 +2618,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!50 &1378857259
 Rigidbody2D:
   serializedVersion: 5
@@ -2852,7 +2856,7 @@ Transform:
   m_GameObject: {fileID: 1571307142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -9.74, z: 0}
+  m_LocalPosition: {x: 0, y: -7.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
