@@ -40,22 +40,18 @@ public class NoteHitter : MonoBehaviour
 
     void LeftPressed()
     {
-        Debug.Log("L");
         Left.GetComponent<ButtonControl>().Hit();
     }
     void UpPressed()
     {
-        Debug.Log("U");
         Up.GetComponent<ButtonControl>().Hit();
     }
     void DownPressed()
     {
-        Debug.Log("D");
         Down.GetComponent<ButtonControl>().Hit();
     }
     void RightPressed()
     {
-        Debug.Log("P");
         Right.GetComponent<ButtonControl>().Hit();
     }
 }

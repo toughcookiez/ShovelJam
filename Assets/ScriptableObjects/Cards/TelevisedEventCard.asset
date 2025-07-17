@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9306624969cfe24ea72ae5cffa83f8e, type: 3}
+  m_Name: TelevisedEventCard
+  m_EditorClassIdentifier: 
+  Title: Televised event
+  Description: Makes you win more fans, but less money
+  BackGround: {fileID: 3639665479937958089, guid: bca5f163d59cb6e4c8a38623d57013b6, type: 3}
+  Price: 2500
+  _cost: 500
+  _fans: 300
