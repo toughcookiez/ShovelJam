@@ -31,12 +31,14 @@ public class BandStats : ScriptableObject
         return amount;
     }
 
-    public void ReviseMistakeLimit(int amount)
+    public int ReviseMistakeLimit(int amount)
     {
         foreach (Card card in _cards)
         {
             amount = card.ReviseMistakeLimit(new CardContext(this), amount);
         }
+
+        return amount;
     }
 
     public void UpdateEarnedMoney(int amount)

@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfad4bdd8c8b3564dbd6fe35ac9edebe, type: 3}
   m_Name: BandStats
   m_EditorClassIdentifier: 
-  _money: 4000
+  _money: 0
   _fans: 0
-  _cards:
-  - {fileID: 11400000, guid: e06f1833b4c8bfa438071842b67dfa1c, type: 2}
-  - {fileID: 11400000, guid: 3f74c379c4bcbc9489d015abe096b2cf, type: 2}
+  _cards: []

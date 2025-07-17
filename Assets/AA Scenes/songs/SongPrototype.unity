@@ -273,6 +273,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!50 &39355447
 Rigidbody2D:
   serializedVersion: 5
@@ -474,6 +475,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!61 &184384068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -958,6 +960,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!50 &482285583
 Rigidbody2D:
   serializedVersion: 5
@@ -2010,6 +2013,8 @@ MonoBehaviour:
   _missDetector: {fileID: 1571307143}
   _rewardText: {fileID: 1071235350}
   _mistakeText: {fileID: 742206469}
+  _updatingText: 0
+  _updatingRewardText: 0
 --- !u!114 &1112229545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,6 +2619,7 @@ MonoBehaviour:
   isHitting: 0
   _noteExplosion: {fileID: 691197768483855020, guid: f3ffb382d98cd5f4c9749474580a25ab, type: 3}
   VFXHolder: {fileID: 1964988389}
+  _missDetector: {fileID: 1571307143}
 --- !u!50 &1378857259
 Rigidbody2D:
   serializedVersion: 5
@@ -2830,7 +2836,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 3.86}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

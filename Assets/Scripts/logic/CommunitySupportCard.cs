@@ -8,16 +8,7 @@ public class CommunitySupportCard : Card
 
     public override int ReviseMistakeLimit(CardContext context, int amount)
     {
-            if (_amount > 0)
-            {
-                _amount--;
-                return amount;
-            }
-            else
-            {
-            return amount++;     
-            }
-
+        return amount - _amount;
 
     }
 }

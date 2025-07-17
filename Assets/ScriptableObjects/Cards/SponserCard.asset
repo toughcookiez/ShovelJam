@@ -15,6 +15,6 @@ MonoBehaviour:
   Title: Sponser
   Description: Makes you win more money, but less fans
   BackGround: {fileID: 6274254477277346887, guid: c520cdca1a877b546bd21ffc29c759e3, type: 3}
-  Price: 0
-  _money: 300
+  Price: 1500
+  _moneyBonus: 300
   _costInFans: 100

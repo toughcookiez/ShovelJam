@@ -43,10 +43,6 @@ public class ButtonControl : MonoBehaviour
 
     public void Hit()
     {
-        if (_note == null)
-        {
-            return;
-        }
 
         StartCoroutine(HitNote(_note));
         
@@ -68,8 +64,9 @@ public class ButtonControl : MonoBehaviour
         }
         else if (!isHitting)
         {
-            SceneLoader.Instance._bandStats.ReviseMistakeLimit(_missDetector._mistakes);
             sr.sprite = NoteMiss;
+            _missDetector._mistakes = SceneLoader.Instance._bandStats.ReviseMistakeLimit(_missDetector._mistakes);
+            Debug.Log(_missDetector._mistakes);
         }
 
         yield return new WaitForSeconds(0.1f);

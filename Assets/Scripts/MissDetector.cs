@@ -74,8 +74,8 @@ public class MissDetector : MonoBehaviour
 
             
             Destroy(collision.gameObject);
-            _bandStats.ReviseMistakeLimit(_mistakes);
-            if (_mistakes >= _mistakeLimit)
+            _mistakes++;
+            if (_bandStats.ReviseMistakeLimit(_mistakes) >= _mistakeLimit)
             {
                 StartCoroutine(LoseLevel());
             }
