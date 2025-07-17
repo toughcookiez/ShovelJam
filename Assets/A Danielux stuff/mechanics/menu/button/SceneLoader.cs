@@ -15,7 +15,7 @@ public class SceneLoader : MonoBehaviour
     public List<Level> Levels;
 
     [SerializeField] public List<int> _startPayments;
-    [SerializeField] private BandStats _bandStats;
+    [SerializeField] public BandStats _bandStats;
     public GameObject fade;
     [Tooltip("the scene you want the player to go")]
     public int SceneTP;
@@ -26,6 +26,14 @@ public class SceneLoader : MonoBehaviour
     {
         Instance = this;
         fade.SetActive(true);
+    }
+
+    public void OpenNextLevel()
+    {
+        if (Levels[GetCurrentLevelIndex() + 1] != null)
+        {
+            Levels[GetCurrentLevelIndex() + 1].isOpen = true;
+        }
     }
 
     public void LoadSong(int sceneIndex)

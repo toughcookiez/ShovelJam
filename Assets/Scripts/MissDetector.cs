@@ -162,6 +162,7 @@ public class MissDetector : MonoBehaviour
 
     private IEnumerator WinLevel()
     {
+            SceneLoader.Instance.OpenNextLevel();
         _audioSource.clip = _cheerClip;
         _audioSource.Play();
         yield return new WaitForSeconds(2f);

@@ -14,13 +14,15 @@ public class PaymentCounter : MonoBehaviour
 
     [SerializeField] private bool _updatingText = false;
 
+    [SerializeField] private bool _updatingRewardText = false;
+
     private void Start()
     {
     }
 
     private void UpdateText()
     {
-        if (!_updatingText && _rewardText.text != _missDetector._currentMoneyReward.ToString())
+        if (!_updatingRewardText && _rewardText.text != _missDetector._currentMoneyReward.ToString())
         {
             StartCoroutine(ChangeRewardText());
         }
@@ -40,7 +42,7 @@ public class PaymentCounter : MonoBehaviour
     {
         try
         {
-            _updatingText = true;
+            _updatingRewardText = true;
 
             int currentValue = int.Parse(_rewardText.text);
 
@@ -58,7 +60,7 @@ public class PaymentCounter : MonoBehaviour
         }
         finally
         {
-            _updatingText = false;
+            _updatingRewardText = false;
         }
     }
 

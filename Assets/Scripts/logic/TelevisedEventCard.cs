@@ -4,20 +4,20 @@ using UnityEngine;
 public class TelevisedEventCard : Card
 {
     [SerializeField]
-    private int _cost;
+    private int _costInMoney;
 
     [SerializeField]
-    private int _fans;
+    private int _fansBonus;
 
 
     public override int ReviseEarnedFans(CardContext context, int amount)
     {
-        return amount + _fans;
+        return amount + _fansBonus;
     }
 
     public override int ReviseEarnedMoney(CardContext context, int amount)
     {
-        return amount - _cost;
+        return amount - _costInMoney;
     }
 
 }

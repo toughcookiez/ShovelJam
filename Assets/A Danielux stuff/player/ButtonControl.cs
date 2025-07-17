@@ -18,6 +18,8 @@ public class ButtonControl : MonoBehaviour
 
     [SerializeField] private Transform VFXHolder;
 
+    [SerializeField] private MissDetector _missDetector;
+
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -66,6 +68,7 @@ public class ButtonControl : MonoBehaviour
         }
         else if (!isHitting)
         {
+            SceneLoader.Instance._bandStats.ReviseMistakeLimit(_missDetector._mistakes);
             sr.sprite = NoteMiss;
         }
 
