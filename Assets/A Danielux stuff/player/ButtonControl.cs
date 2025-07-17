@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ButtonControl : MonoBehaviour
@@ -11,36 +12,23 @@ public class ButtonControl : MonoBehaviour
 
     [Header ("hit detection")]
     public bool isHitting;
-    public GameObject note;
+    public GameObject _note { get; set; }
+
+    public GameObject _noteExplosion;
+
+    [SerializeField] private Transform VFXHolder;
 
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     void OnTriggerStay2D(Collider2D other)
     {
         
         if (other.transform.CompareTag("note"))
         {
-            note = other.gameObject;
+            _note = other.gameObject;
             isHitting = true;
 
         }
@@ -48,41 +36,35 @@ public class ButtonControl : MonoBehaviour
      void OnTriggerExit2D(Collider2D collision)
     {
         isHitting = false;
-        note = null;
+        _note = null;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public void Hit()
     {
-        StartCoroutine(HitNote());
+        if (_note == null)
+        {
+            return;
+        }
+
+        StartCoroutine(HitNote(_note));
+        
     }
-    public IEnumerator HitNote()
+    public IEnumerator HitNote(GameObject note)
     {
 
-       
-        if(isHitting)
+        if (isHitting)
         {
+
+            Instantiate(_noteExplosion, note.transform.position, Quaternion.identity, VFXHolder);
             Destroy(note.gameObject);
-           
+
             sr.sprite = NoteHit;
-            
 
 
-        }else if(!isHitting)
+
+
+        }
+        else if (!isHitting)
         {
             sr.sprite = NoteMiss;
         }

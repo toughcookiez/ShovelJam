@@ -1,0 +1,452 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b449db76cfe0ee247bd0ae34a89a08bd, type: 3}
+  m_Name: Mago-Level3
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: b6a6b12cdce591a4ea481b7006008879, type: 3}
+  transcriptionEntries:
+  - timestamp: 0.9386621
+    lane: 1
+  - timestamp: 1.2586621
+    lane: 1
+  - timestamp: 1.663991
+    lane: 2
+  - timestamp: 1.8773242
+    lane: 1
+  - timestamp: 2.3253288
+    lane: 1
+  - timestamp: 2.7306576
+    lane: 2
+  - timestamp: 3.3493197
+    lane: 1
+  - timestamp: 3.882653
+    lane: 1
+  - timestamp: 4.3306575
+    lane: 2
+  - timestamp: 4.778662
+    lane: 2
+  - timestamp: 5.5679817
+    lane: 1
+  - timestamp: 5.9519954
+    lane: 0
+  - timestamp: 6.442653
+    lane: 3
+  - timestamp: 6.6559863
+    lane: 3
+  - timestamp: 7.2319956
+    lane: 2
+  - timestamp: 7.765329
+    lane: 2
+  - timestamp: 8.21331
+    lane: 0
+  - timestamp: 8.831995
+    lane: 3
+  - timestamp: 9.17331
+    lane: 2
+  - timestamp: 9.578662
+    lane: 1
+  - timestamp: 9.813311
+    lane: 3
+  - timestamp: 10.303991
+    lane: 1
+  - timestamp: 10.794648
+    lane: 2
+  - timestamp: 11.199977
+    lane: 3
+  - timestamp: 11.455986
+    lane: 2
+  - timestamp: 11.967982
+    lane: 2
+  - timestamp: 12.373311
+    lane: 2
+  - timestamp: 12.799977
+    lane: 1
+  - timestamp: 13.01331
+    lane: 0
+  - timestamp: 13.653311
+    lane: 1
+  - timestamp: 13.994649
+    lane: 0
+  - timestamp: 14.357325
+    lane: 1
+  - timestamp: 14.591995
+    lane: 0
+  - timestamp: 15.231996
+    lane: 1
+  - timestamp: 15.594648
+    lane: 2
+  - timestamp: 16.021315
+    lane: 0
+  - timestamp: 16.21331
+    lane: 2
+  - timestamp: 16.810658
+    lane: 0
+  - timestamp: 17.194649
+    lane: 2
+  - timestamp: 17.578663
+    lane: 0
+  - timestamp: 17.81331
+    lane: 2
+  - timestamp: 18.47465
+    lane: 1
+  - timestamp: 18.79465
+    lane: 3
+  - timestamp: 19.178661
+    lane: 0
+  - timestamp: 19.413311
+    lane: 3
+  - timestamp: 19.989319
+    lane: 1
+  - timestamp: 20.245329
+    lane: 0
+  - timestamp: 20.799978
+    lane: 1
+  - timestamp: 23.402653
+    lane: 0
+  - timestamp: 24.042652
+    lane: 1
+  - timestamp: 24.618662
+    lane: 1
+  - timestamp: 25.173311
+    lane: 1
+  - timestamp: 25.66399
+    lane: 2
+  - timestamp: 26.431995
+    lane: 1
+  - timestamp: 26.77331
+    lane: 1
+  - timestamp: 27.007982
+    lane: 2
+  - timestamp: 28.735987
+    lane: 2
+  - timestamp: 29.58932
+    lane: 3
+  - timestamp: 29.994648
+    lane: 3
+  - timestamp: 30.250658
+    lane: 3
+  - timestamp: 31.701315
+    lane: 1
+  - timestamp: 31.850658
+    lane: 3
+  - timestamp: 32.255985
+    lane: 1
+  - timestamp: 32.72533
+    lane: 0
+  - timestamp: 33.258663
+    lane: 2
+  - timestamp: 34.090656
+    lane: 0
+  - timestamp: 34.30399
+    lane: 3
+  - timestamp: 35.071995
+    lane: 2
+  - timestamp: 35.477325
+    lane: 0
+  - timestamp: 35.839977
+    lane: 3
+  - timestamp: 36.437325
+    lane: 0
+  - timestamp: 36.799976
+    lane: 2
+  - timestamp: 37.20533
+    lane: 0
+  - timestamp: 37.439976
+    lane: 3
+  - timestamp: 37.84533
+    lane: 0
+  - timestamp: 38.250656
+    lane: 2
+  - timestamp: 38.634647
+    lane: 1
+  - timestamp: 39.957325
+    lane: 2
+  - timestamp: 42.602654
+    lane: 2
+  - timestamp: 43.199978
+    lane: 3
+  - timestamp: 43.626644
+    lane: 3
+  - timestamp: 44.351994
+    lane: 2
+  - timestamp: 44.607983
+    lane: 3
+  - timestamp: 45.56798
+    lane: 0
+  - timestamp: 46.015987
+    lane: 1
+  - timestamp: 46.20798
+    lane: 0
+  - timestamp: 48.810658
+    lane: 3
+  - timestamp: 49.237324
+    lane: 0
+  - timestamp: 49.471996
+    lane: 3
+  - timestamp: 51.00798
+    lane: 1
+  - timestamp: 51.391994
+    lane: 1
+  - timestamp: 51.797325
+    lane: 2
+  - timestamp: 52.415985
+    lane: 2
+  - timestamp: 52.799976
+    lane: 3
+  - timestamp: 53.35465
+    lane: 1
+  - timestamp: 53.738663
+    lane: 2
+  - timestamp: 54.186646
+    lane: 2
+  - timestamp: 54.61331
+    lane: 0
+  - timestamp: 55.01866
+    lane: 0
+  - timestamp: 55.637325
+    lane: 1
+  - timestamp: 56.021317
+    lane: 2
+  - timestamp: 56.426643
+    lane: 3
+  - timestamp: 56.597324
+    lane: 2
+  - timestamp: 57.00265
+    lane: 2
+  - timestamp: 57.40798
+    lane: 0
+  - timestamp: 58.64533
+    lane: 1
+  - timestamp: 59.17866
+    lane: 0
+  - timestamp: 59.81866
+    lane: 1
+  - timestamp: 60.330658
+    lane: 1
+  - timestamp: 61.01331
+    lane: 3
+  - timestamp: 61.738663
+    lane: 1
+  - timestamp: 62.421314
+    lane: 2
+  - timestamp: 62.84798
+    lane: 2
+  - timestamp: 63.061314
+    lane: 0
+  - timestamp: 63.423992
+    lane: 0
+  - timestamp: 63.807983
+    lane: 1
+  - timestamp: 64.19199
+    lane: 2
+  - timestamp: 64.76798
+    lane: 3
+  - timestamp: 65.38664
+    lane: 3
+  - timestamp: 67.392
+    lane: 1
+  - timestamp: 68.01066
+    lane: 0
+  - timestamp: 68.415985
+    lane: 0
+  - timestamp: 68.672
+    lane: 0
+  - timestamp: 70.07998
+    lane: 1
+  - timestamp: 70.207985
+    lane: 3
+  - timestamp: 70.65598
+    lane: 1
+  - timestamp: 71.06132
+    lane: 1
+  - timestamp: 71.65866
+    lane: 2
+  - timestamp: 72.042656
+    lane: 0
+  - timestamp: 72.55465
+    lane: 2
+  - timestamp: 72.93866
+    lane: 0
+  - timestamp: 73.42932
+    lane: 0
+  - timestamp: 73.87733
+    lane: 3
+  - timestamp: 74.239975
+    lane: 1
+  - timestamp: 74.81599
+    lane: 2
+  - timestamp: 75.26399
+    lane: 0
+  - timestamp: 75.64798
+    lane: 3
+  - timestamp: 75.797325
+    lane: 3
+  - timestamp: 76.18131
+    lane: 1
+  - timestamp: 76.60798
+    lane: 0
+  - timestamp: 76.992
+    lane: 2
+  - timestamp: 78.33598
+    lane: 3
+  - timestamp: 78.99732
+    lane: 0
+  - timestamp: 79.57331
+    lane: 3
+  - timestamp: 79.95732
+    lane: 1
+  - timestamp: 80.23465
+    lane: 3
+  - timestamp: 80.95998
+    lane: 3
+  - timestamp: 81.55733
+    lane: 1
+  - timestamp: 82.17599
+    lane: 0
+  - timestamp: 83.11465
+    lane: 0
+  - timestamp: 83.477325
+    lane: 0
+  - timestamp: 84.138664
+    lane: 1
+  - timestamp: 84.62932
+    lane: 3
+  - timestamp: 86.65598
+    lane: 0
+  - timestamp: 87.231995
+    lane: 3
+  - timestamp: 87.80798
+    lane: 0
+  - timestamp: 89.83465
+    lane: 0
+  - timestamp: 90.325325
+    lane: 1
+  - timestamp: 91.32798
+    lane: 3
+  - timestamp: 92.138664
+    lane: 1
+  - timestamp: 93.01331
+    lane: 1
+  - timestamp: 93.75998
+    lane: 2
+  - timestamp: 94.591995
+    lane: 0
+  - timestamp: 95.40266
+    lane: 1
+  - timestamp: 96.19199
+    lane: 3
+  - timestamp: 96.661316
+    lane: 2
+  - timestamp: 97.57866
+    lane: 0
+  - timestamp: 98.21866
+    lane: 1
+  - timestamp: 98.77331
+    lane: 1
+  - timestamp: 98.98664
+    lane: 0
+  - timestamp: 99.41331
+    lane: 2
+  - timestamp: 100.18131
+    lane: 3
+  - timestamp: 100.735985
+    lane: 0
+  - timestamp: 101.375984
+    lane: 3
+  - timestamp: 101.951996
+    lane: 1
+  - timestamp: 102.54932
+    lane: 1
+  - timestamp: 102.93331
+    lane: 1
+  - timestamp: 103.33866
+    lane: 2
+  - timestamp: 103.95732
+    lane: 1
+  - timestamp: 104.83199
+    lane: 1
+  - timestamp: 105.343994
+    lane: 3
+  - timestamp: 105.79199
+    lane: 3
+  - timestamp: 106.36798
+    lane: 2
+  - timestamp: 107.32798
+    lane: 2
+  - timestamp: 107.818665
+    lane: 1
+  - timestamp: 108.20265
+    lane: 0
+  - timestamp: 108.52265
+    lane: 3
+  - timestamp: 108.92798
+    lane: 2
+  - timestamp: 109.61066
+    lane: 1
+  - timestamp: 110.186646
+    lane: 0
+  - timestamp: 111.33866
+    lane: 1
+  - timestamp: 112.170654
+    lane: 0
+  - timestamp: 113.002655
+    lane: 2
+  - timestamp: 113.77066
+    lane: 2
+  - timestamp: 114.559975
+    lane: 3
+  - timestamp: 115.32798
+    lane: 1
+  - timestamp: 115.818665
+    lane: 2
+  - timestamp: 116.352
+    lane: 0
+  - timestamp: 116.79998
+    lane: 2
+  - timestamp: 117.33331
+    lane: 1
+  - timestamp: 120.12798
+    lane: 1
+  - timestamp: 120.93866
+    lane: 1
+  - timestamp: 121.74932
+    lane: 0
+  - timestamp: 122.60265
+    lane: 0
+  - timestamp: 123.43465
+    lane: 3
+  - timestamp: 124.138664
+    lane: 1
+  - timestamp: 124.92798
+    lane: 2
+  - timestamp: 125.78132
+    lane: 3
+  - timestamp: 126.54932
+    lane: 0
+  - timestamp: 127.38132
+    lane: 3
+  - timestamp: 128.10664
+    lane: 0
+  - timestamp: 128.93866
+    lane: 2
+  - timestamp: 129.77066
+    lane: 2
+  - timestamp: 130.60265
+    lane: 0
+  - timestamp: 131.34932
+    lane: 3
+  - timestamp: 132.11732
+    lane: 2
+  - timestamp: 132.94933
+    lane: 0
+  - timestamp: 133.6533
+    lane: 0
