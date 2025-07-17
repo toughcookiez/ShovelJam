@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
@@ -70,11 +71,19 @@ public class SceneLoader : MonoBehaviour
 
     public int GetCurrentLevelIndex()
     {
-        return SceneManager.GetActiveScene().buildIndex + 3;
+        return SceneManager.GetActiveScene().buildIndex - 3;
     }
 
     public void ChangeScene(int SceneIndex)
     {
         StartCoroutine(Fade(SceneIndex));
+    }
+
+    internal void OpenNextLevel()
+    {
+        if (Levels[GetCurrentLevelIndex() + 1] != null)
+        {
+            ChangeScene(GetCurrentLevelIndex() + 4);
+        }
     }
 }

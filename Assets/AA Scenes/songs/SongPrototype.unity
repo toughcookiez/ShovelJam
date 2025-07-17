@@ -2144,11 +2144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NoteHolder: {fileID: 1502583481}
-  _mistakeLimit: 8
+  _mistakeLimit: 14
   _musicSource: {fileID: 605391296}
   _cheerClip: {fileID: 8300000, guid: e61d7819b1764eb459040bb4ddbc1f57, type: 3}
-  _mistakeLimitForLilBonus: 4
-  _mistakeLimitForBigBonus: 6
+  _mistakeLimitForLilBonus: 11
+  _mistakeLimitForBigBonus: 7
   _bandStats: {fileID: 11400000, guid: 71d1ffd04320a5243beb73d4a787576f, type: 2}
   _moneyRewardForLilBonus: 100
   _moneyRewardForBigBonus: 200
