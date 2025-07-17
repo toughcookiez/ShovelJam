@@ -118,6 +118,11 @@ public class MissDetector : MonoBehaviour
         }
     }
 
+    public void TakeDamage()
+    {
+        StartCoroutine(ChangeKeyColor());
+    }
+
     private IEnumerator ChangeKeyColor()
     {
         Color color0 = keys[0].color;

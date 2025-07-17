@@ -65,7 +65,10 @@ public class ButtonControl : MonoBehaviour
         else if (!isHitting)
         {
             sr.sprite = NoteMiss;
+            _missDetector._mistakes++;
             _missDetector._mistakes = SceneLoader.Instance._bandStats.ReviseMistakeLimit(_missDetector._mistakes);
+            _missDetector.TakeDamage();
+           
             Debug.Log(_missDetector._mistakes);
         }
 
