@@ -15,7 +15,10 @@ EditorBuildSettings:
     path: Assets/AA Scenes/menu/Shop.unity
     guid: 0923db46e9ed122499858415bce5791e
   - enabled: 1
-    path: Assets/AA Scenes/songs/SongPrototype.unity
+    path: Assets/AA Scenes/songs/Level01.unity
+    guid: d339af7e45d7c094d918275553c2320e
+  - enabled: 1
+    path: Assets/AA Scenes/songs/Level02.unity
     guid: 7d8e0d1c717ca794e88efc2165d65c4f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

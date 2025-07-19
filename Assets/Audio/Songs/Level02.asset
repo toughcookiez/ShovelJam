@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b449db76cfe0ee247bd0ae34a89a08bd, type: 3}
-  m_Name: Mago-Level3
+  m_Name: Level02
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: b6a6b12cdce591a4ea481b7006008879, type: 3}
   transcriptionEntries:

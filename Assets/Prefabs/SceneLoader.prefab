@@ -46,7 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Levels:
   - {fileID: 11400000, guid: dec43c4a65194314cbba9cf897d35e58, type: 2}
-  _startPayments: f4010000
+  - {fileID: 11400000, guid: 2d1a6885af43d0d439ca12b47b6edfcd, type: 2}
+  _startPayments: f4010000e8030000
   _bandStats: {fileID: 11400000, guid: 71d1ffd04320a5243beb73d4a787576f, type: 2}
   fade: {fileID: 0}
   SceneTP: 1

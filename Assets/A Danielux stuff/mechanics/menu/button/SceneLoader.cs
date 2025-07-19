@@ -83,7 +83,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (Levels[GetCurrentLevelIndex() + 1] != null)
         {
-            ChangeScene(GetCurrentLevelIndex() + 4);
+            ChangeScene(GetCurrentLevelIndex() + 3);
         }
     }
 }
