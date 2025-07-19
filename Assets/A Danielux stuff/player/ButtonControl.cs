@@ -10,6 +10,8 @@ public class ButtonControl : MonoBehaviour
     public Sprite NoteMiss;
     public Sprite Default;
 
+    public BandController BandController;
+
     [Header ("hit detection")]
     public bool isHitting;
     public GameObject _note { get; set; }
@@ -57,6 +59,8 @@ public class ButtonControl : MonoBehaviour
             Destroy(note.gameObject);
 
             sr.sprite = NoteHit;
+
+            BandController.UpdateSprites();
 
 
 
