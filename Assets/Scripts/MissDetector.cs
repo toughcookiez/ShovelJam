@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -44,12 +46,15 @@ public class MissDetector : MonoBehaviour
 
     public int _currentMoneyReward { get; set; }
 
-    
+
+    private Color color0;
+    private Color color1;
+    private Color color2;
+    private Color color3;
 
 
-    
+    private const int NON_LEVEL_SCENES = 3;
 
-    
 
 
 
@@ -62,9 +67,27 @@ public class MissDetector : MonoBehaviour
 
         _bandStats.ApplyRemoveCards();
 
+        int currentLevel = SceneManager.GetActiveScene().buildIndex - NON_LEVEL_SCENES;
+        if (currentLevel < 0)
+        {
+            Debug.LogError("Level index is negative.");
+            return;
+        }
+
+        List<int> startPayments = SceneLoader.Instance._startPayments;
+        if (startPayments == null || startPayments.Count <= currentLevel)
+        {
+            Debug.LogError("Could not get valid start payment [startPayments.Count = " + startPayments.Count + ", currentLevel=" + currentLevel);
+            return;
+        }
+
         
-        _moneyRewardForStartingLevel = SceneLoader.Instance._startPayments[SceneManager.GetActiveScene().buildIndex - 3];
+        _moneyRewardForStartingLevel = startPayments[currentLevel];
         _currentMoneyReward = _moneyRewardForStartingLevel + _moneyRewardForBigBonus;
+        color0 = keys[0].color;
+        color1 = keys[1].color;
+        color2 = keys[2].color;
+        color3 = keys[3].color;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -105,7 +128,9 @@ public class MissDetector : MonoBehaviour
             if (_mistakes < _mistakeLimitForLilBonus && _mistakes > _mistakeLimitForBigBonus)
             {
                _bandStats.UpdateEarnedMoney(_moneyRewardForLilBonus);
+                _bandStats.Money += _moneyRewardForLilBonus;
                 _bandStats.UpdateFans(_fanRewardForLilBonus);
+                _bandStats.Fans += _fanRewardForLilBonus;
             }
             else if (_mistakes > _mistakeLimitForBigBonus)
             {
@@ -126,10 +151,7 @@ public class MissDetector : MonoBehaviour
 
     private IEnumerator ChangeKeyColor()
     {
-        Color color0 = keys[0].color;
-        Color color1 = keys[1].color;
-        Color color2 = keys[2].color;
-        Color color3 = keys[3].color;
+        
         keys[0].color = Color.red;
         keys[1].color = Color.red;
         keys[2].color = Color.red;
@@ -168,15 +190,15 @@ public class MissDetector : MonoBehaviour
 
     private IEnumerator WinLevel()
     {
-        SceneLoader.Instance.OpenNextLevel();
         _audioSource.clip = _cheerClip;
         _audioSource.Play();
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(4f);
         while (_audioSource.volume != 0)
         {
             _audioSource.volume -= .005f;
             if (_audioSource.volume < .5f)
             {
+                SceneLoader.Instance.OpenNextLevel();
                 SceneLoader.Instance.ChangeScene(2);
             }
             yield return null;
