@@ -48,7 +48,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dec43c4a65194314cbba9cf897d35e58, type: 2}
   - {fileID: 11400000, guid: 2d1a6885af43d0d439ca12b47b6edfcd, type: 2}
   - {fileID: 11400000, guid: 96ee25b71e8de064abbaf61d7569a82b, type: 2}
-  _startPayments: f4010000e8030000dc050000
+  - {fileID: 11400000, guid: 64107817ca418294083f4f45f9c33737, type: 2}
+  _startPayments: f4010000e8030000dc050000d0070000
   _bandStats: {fileID: 11400000, guid: 71d1ffd04320a5243beb73d4a787576f, type: 2}
   fade: {fileID: 0}
   SceneTP: 1

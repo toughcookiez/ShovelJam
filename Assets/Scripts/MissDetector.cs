@@ -132,7 +132,7 @@ public class MissDetector : MonoBehaviour
                 _bandStats.UpdateFans(_fanRewardForLilBonus);
                 _bandStats.Fans += _fanRewardForLilBonus;
             }
-            else if (_mistakes > _mistakeLimitForBigBonus)
+            else if (_mistakes < _mistakeLimitForBigBonus)
             {
                _bandStats.UpdateEarnedMoney(_moneyRewardForBigBonus);
                 _bandStats.UpdateFans(_fanRewardForBigBonus);
