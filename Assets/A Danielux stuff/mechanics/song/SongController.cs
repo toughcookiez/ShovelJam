@@ -13,7 +13,6 @@ public class SongController : MonoBehaviour
     [Header("Debug")]
     public float SongLength;
     public float SongTime;
-    public NoteScript NS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
