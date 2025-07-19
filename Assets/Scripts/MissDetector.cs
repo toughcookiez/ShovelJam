@@ -128,7 +128,9 @@ public class MissDetector : MonoBehaviour
             if (_mistakes < _mistakeLimitForLilBonus && _mistakes > _mistakeLimitForBigBonus)
             {
                _bandStats.UpdateEarnedMoney(_moneyRewardForLilBonus);
+                _bandStats.Money += _moneyRewardForLilBonus;
                 _bandStats.UpdateFans(_fanRewardForLilBonus);
+                _bandStats.Fans += _fanRewardForLilBonus;
             }
             else if (_mistakes > _mistakeLimitForBigBonus)
             {
@@ -190,7 +192,7 @@ public class MissDetector : MonoBehaviour
     {
         _audioSource.clip = _cheerClip;
         _audioSource.Play();
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4f);
         while (_audioSource.volume != 0)
         {
             _audioSource.volume -= .005f;
