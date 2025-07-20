@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AA Scenes/songs/Level04.unity
     guid: a1afe37bf9465734abd4d55c594d55e8
+  - enabled: 1
+    path: Assets/AA Scenes/menu/CREDITS.unity
+    guid: cc026eea8544b644b834f654b62f3876
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
