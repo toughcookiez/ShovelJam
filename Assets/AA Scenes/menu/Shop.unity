@@ -1573,6 +1573,10 @@ PrefabInstance:
       propertyPath: fade
       value: 
       objectReference: {fileID: 1988939315}
+    - target: {fileID: 3136182061545608611, guid: 03d9b4493e2b63140ad352621ea02bbf, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1589165247}
     - target: {fileID: 6811281571274842458, guid: 03d9b4493e2b63140ad352621ea02bbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 898.21295
