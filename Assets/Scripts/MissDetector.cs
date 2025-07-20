@@ -43,6 +43,8 @@ public class MissDetector : MonoBehaviour
 
     private bool _isDone;
 
+    [SerializeField] private CrowdController _crowd;
+
 
     public int _currentMoneyReward { get; set; }
 
@@ -174,6 +176,7 @@ public class MissDetector : MonoBehaviour
             yield return null;
         }
         _audioSource.Play();
+        _crowd.Boo();
         yield return new WaitForSeconds(2f);
         while (_audioSource.volume != 0)
         {
@@ -192,7 +195,8 @@ public class MissDetector : MonoBehaviour
     {
         _audioSource.clip = _cheerClip;
         _audioSource.Play();
-        yield return new WaitForSeconds(4f);
+        _crowd.Cheer();
+        yield return new WaitForSeconds(6f);
         while (_audioSource.volume != 0)
         {
             _audioSource.volume -= .005f;
